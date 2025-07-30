@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Full-Stack Developer</title>
+    <!--<link rel="stylesheet" href="{% static 'css/home.css' %}">-->
+    <link rel="stylesheet" href="{% static 'css/newstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'js/por.js' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Sail</span>aja</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </header>
+    <!--Home-->
+    <section class="home">
+        <div class="home-content">
+            <h3>Hi</h3>
+            <h1>I'm <span>Sailaja </span><br>a Full Stack Developer</h1>
+            <p>I'm a Python Full-Stack Developer passionate about building dynamic, efficient, and user-friendly web applications. With expertise in Python, Django, SQL, HTML, CSS, JavaScript, and Bootstrap, I create seamless digital experiences from back-end to front-end.</p>
+            <div class="btn-box">
+                <button class="btn-1"><a href="{% static 'pdf/ThadeSailaja-Resume.pdf' %}">Resume</a></button>
+                <button class="btn-2"><a href="#">Hire Me</a></button>
+            </div>
+        </div>
+        <div class="img-box">
+            <img src="{% static 'images/sailaja.jpg' %}" alt="">
+        </div>
+    </section>
+
+    <!--About-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="{% static 'images/sailaja.jpg' %}" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Full-Stack <span>Developer</span></h3>
+            <p>Hello! I'm a passionate Python Full-Stack Developer with a strong foundation in Python, SQL, HTML, CSS, JavaScript, Bootstrap, and Django. As a fresher, I am eager to apply my skills in building dynamic, efficient, and user-friendly web applications.</p>
+            <p>I enjoy solving problems through code and continuously expanding my knowledge of modern web development technologies. My expertise in Django allows me to create scalable back-end systems, while my proficiency in front-end technologies ensures a seamless user experience.</p>
+            <p>I am always open to learning new technologies and collaborating with teams to build innovative solutions. If you're looking for a dedicated developer to bring your ideas to life, let's connect!</p>
+        </div>
+    </section>
+
+     <!--Education-->
+     <section class="education" id="education">
+        <h2 class="heading">My <span>Education</span></h2>
+        <div class="edu-content">
+            <div class="edu-box">
+                <h1><span>2021-2024</span></h1>
+                <h3>Bachelor's in Computer Science</h3>
+                <h4>SVD College,YogiVemana University</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla neque odit vero reprehenderit suscipit s</p>
+
+            </div>
+            <div class="edu-box">
+                <h1><span>2019-2021</span></h1>
+                <h3>Diploma in Elementary Eduction</h3>
+                <h4>DIET,YogiVemana University</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione amet expedita odio saepe libero, iste quo fuga recusandae rerum sunt!</p>
+            </div>
+            <div class="edu-box">
+                <h1><span>2017-2019</span></h1>
+                <h3>Intermediate</h3>
+                <h4>Sai Ram Junior College</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nihil voluptas vel quibusdam debitis id voluptatibus. Exercitationem voluptates quos aut.</p>
+            </div>
+            <div class="edu-box">
+                <h1><span>YOP:-2017</span></h1>
+                <h3>Secondary School</h3>
+                <h4>SV High School</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque voluptates quae provident culpa repellat veniam natus atque consequuntur aut nesciunt?</p>
+            </div>
+        </div>
+    </section>
+    <!--Skills-->
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skills-content">
+            <div class="skill-box">
+                <i class='bx bxl-html5 skill-icon'></i>
+                <h3>HTML</h3>
+                <div class="progress-bar"><div class="progress html">90%</div></div>
+            </div>
+            <div class="skill-box">
+                <i class='bx bxl-css3 skill-icon'></i>
+                <h3>CSS</h3>
+                <div class="progress-bar"><div class="progress css">85%</div></div>
+            </div>
+            <div class="skill-box">
+                <i class='bx bxl-javascript skill-icon'></i>
+                <h3>JavaScript</h3>
+                <div class="progress-bar"><div class="progress js">75%</div></div>
+            </div>
+            <div class="skill-box">
+                <i class='bx bxl-python skill-icon'></i>
+                <h3>Python</h3>
+                <div class="progress-bar"><div class="progress python">80%</div></div>
+            </div>
+            <div class="skill-box">
+                <i class='bx bxl-django skill-icon'></i>
+                <h3>Django</h3>
+                <div class="progress-bar"><div class="progress django">70%</div></div>
+            </div>
+            <div class="skill-box">
+                <i class='bx bx-data skill-icon'></i>
+                <h3>SQL</h3>
+                <div class="progress-bar"><div class="progress sql">85%</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!--contact-->
+    <section class="contact-form" id="contact">
+        <h2 class="contact">Contact <span>Me</span></h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" name="un" id="un" required>
+                <input type="email" placeholder="Email" name="email" id="email" required>
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Phone Number" name="phone" id="phone" required>
+                <input type="text" placeholder="Subject" name="sub" id="sub" required>
+            </div>
+            <textarea name="msg" id="msg" cols="30" row="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn-2">
+        </form>
+    </section>
+    
+    <!--footer-->
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="#"><i class='bx bxl-github'></i></a>
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Projects</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+        <p class="copyright">@2024 SAILAJA | All rights Reserver</p>
+    </footer>
+</body>
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navbar = document.querySelector('.navbar');
+
+  navToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+</script>
+</html>
